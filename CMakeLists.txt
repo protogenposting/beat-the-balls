@@ -1,13 +1,17 @@
 cmake_minimum_required(VERSION 3.30)
 include(FetchContent)
 
-project(Whatever)
+project(beat-the-balls)
 
 file(GLOB_RECURSE SourceFiles src/*)
 
 add_executable(${PROJECT_NAME} ${SourceFiles})
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
+
+set(CMAKE_BINARY_DIR bin)
+
+file(COPY assets DESTINATION assets)
 
 FetchContent_Declare(
   glfw

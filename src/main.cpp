@@ -33,7 +33,7 @@ int main()
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    // glad: load all OpenGL function pointers
+    // glew: load all OpenGL function pointers
     // ---------------------------------------
     GLenum err = glewInit();
     if (GLEW_OK != err)
@@ -44,7 +44,7 @@ int main()
 
     // build and compile our shader program
     // ------------------------------------
-    Shader ourShader("src/shaders/shader_test.vs", "src/shaders/shader_test.fs"); // you can name your shader files however you like
+    Shader ourShader("assets/shaders/shader_test.vs", "assets/shaders/shader_test.fs"); // you can name your shader files however you like
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
