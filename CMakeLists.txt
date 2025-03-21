@@ -56,3 +56,9 @@ FetchContent_MakeAvailable(stb)
 target_include_directories(${PROJECT_NAME} PUBLIC source/
                                         ${CMAKE_BINARY_DIR}/_deps/stb-src)
 target_link_libraries(${PROJECT_NAME} PUBLIC glfw libglew_static glm)
+
+add_custom_command(
+    TARGET ${PROJECT_NAME}
+    PRE_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/assets/
+            $<TARGET_FILE_DIR:${PROJECT_NAME}>/assets)
