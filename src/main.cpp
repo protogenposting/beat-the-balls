@@ -44,7 +44,7 @@ int main()
 
     // build and compile our shader program
     // ------------------------------------
-    Shader ourShader("assets/shaders/shader_test.vs", "assets/shaders/shader_test.fs"); // you can name your shader files however you like
+    Shader ourShader("./assets/shaders/shader_test.vs", "./assets/shaders/shader_test.fs"); // you can name your shader files however you like
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
