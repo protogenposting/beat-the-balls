@@ -13,7 +13,7 @@ add_executable(${PROJECT_NAME} ${SourceFiles})
 set(GLFW_BUILD_DOCS OFF)
 set(GLFW_BUILD_TESTS OFF)
 set(GLFW_BUILD_EXAMPLES OFF)
-set(GLFW_BUILD_WAYLAND ON)
+set(GLFW_BUILD_X11 ON)
 FetchContent_Declare(
   glfw
   GIT_REPOSITORY https://github.com/glfw/glfw.git
